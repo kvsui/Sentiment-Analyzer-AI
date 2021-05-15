@@ -67,7 +67,6 @@
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
               <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
-              
             </div>
             <!-- Navbar Right Side -->
             <div class="nav navbar-right">
@@ -76,8 +75,8 @@
             
             <li><div class="dropdown-divider"></div></li>
           		{% if current_user.is_authenticated %}
-          		<a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
-                <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+              <a class="nav-item nav-link" href="{{ url_for('dashboard') }}">Hashtag</a>
+              <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
           		{% else %}
           		<li><a class="dropdown-item" href="{{ url_for('login') }}">Login</a></li>
           		<li><a class="dropdown-item" href="{{ url_for('register') }}">Register</a></li>
